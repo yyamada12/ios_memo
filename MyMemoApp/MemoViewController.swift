@@ -17,9 +17,18 @@ class MemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        saveButton.isEnabled = false
     }
+    
+    @IBAction func memoTextFieldChanged(_ sender: Any) {
+        let memo = memoTextField.text ?? ""
+        saveButton.isEnabled = !memo.isEmpty
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let button = sender as? UIBarButtonItem, button === self.saveButton else {
