@@ -17,16 +17,28 @@ class MemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveButton.isEnabled = false
+        if let memo = memo {
+            memoTextField.text = memo
+            navigationItem.title = "Edit Memo"
+        }
+        updateSaveButtonState()
     }
     
-    @IBAction func memoTextFieldChanged(_ sender: Any) {
+    private func updateSaveButtonState() {
         let memo = memoTextField.text ?? ""
         saveButton.isEnabled = !memo.isEmpty
     }
     
+    @IBAction func memoTextFieldChanged(_ sender: Any) {
+        updateSaveButtonState()
+    }
+    
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if presentingViewController is UINavigationController {
+            dismiss(animated: true, completion: nil)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     
