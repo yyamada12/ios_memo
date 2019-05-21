@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" title="My Memos" id="5ER-H0-6YB">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KzM-xW-mQx">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="addMemo" id="uSK-2V-KjQ"/>
+                                <segue destination="NTu-La-BjU" kind="presentation" identifier="addMemo" id="uSK-2V-KjQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -54,20 +54,47 @@
             </objects>
             <point key="canvasLocation" x="328.98550724637681" y="120.53571428571428"/>
         </scene>
-        <!--Memo View Controller-->
+        <!--New Memo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemoViewController" customModule="MyMemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Qk-OY-OY8">
+                                <rect key="frame" x="30" y="118" width="354" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Qk-OY-OY8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1eN-tD-Aon"/>
+                            <constraint firstItem="9Qk-OY-OY8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Idt-MS-NnQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Qk-OY-OY8" secondAttribute="trailing" constant="30" id="Lvt-i3-wLt"/>
+                            <constraint firstItem="9Qk-OY-OY8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kHw-HQ-ePF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Memo" id="pIR-aK-uJy">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="K1n-2J-4gE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="7NU-e4-DPx">
+                            <connections>
+                                <segue destination="F4T-uv-3qD" kind="unwind" unwindAction="unwindToMemoListWithSender:" id="0oB-fn-rZb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="memoTextField" destination="9Qk-OY-OY8" id="YOi-l4-Ft6"/>
+                        <outlet property="saveButton" destination="7NU-e4-DPx" id="Gg4-N8-a9z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="F4T-uv-3qD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1110.144927536232" y="120.53571428571428"/>
+            <point key="canvasLocation" x="2020.289855072464" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9qV-mx-fHI">
@@ -86,6 +113,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8X-a9-XfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-581.15942028985512" y="120.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sOa-lf-hYu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NTu-La-BjU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XwA-fl-Ogn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2sb-G9-tnR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCK-Xn-w59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110.144927536232" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>
