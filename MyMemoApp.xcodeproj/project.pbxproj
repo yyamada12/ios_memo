@@ -14,6 +14,7 @@
 		1B825F2722937CEC005AAB32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B825F2522937CEC005AAB32 /* LaunchScreen.storyboard */; };
 		1B825F3222937CEC005AAB32 /* MyMemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B825F3122937CEC005AAB32 /* MyMemoAppTests.swift */; };
 		1B825F3D22937CEC005AAB32 /* MyMemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B825F3C22937CEC005AAB32 /* MyMemoAppUITests.swift */; };
+		1B825F4B22937D91005AAB32 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B825F4A22937D91005AAB32 /* MemoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1B825F3822937CEC005AAB32 /* MyMemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B825F3C22937CEC005AAB32 /* MyMemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemoAppUITests.swift; sourceTree = "<group>"; };
 		1B825F3E22937CEC005AAB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B825F4A22937D91005AAB32 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				1B825F1C22937CE6005AAB32 /* AppDelegate.swift */,
 				1B825F1E22937CE6005AAB32 /* ViewController.swift */,
 				1B825F2022937CE6005AAB32 /* Main.storyboard */,
+				1B825F4A22937D91005AAB32 /* MemoTableViewController.swift */,
 				1B825F2322937CEC005AAB32 /* Assets.xcassets */,
 				1B825F2522937CEC005AAB32 /* LaunchScreen.storyboard */,
 				1B825F2822937CEC005AAB32 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				1B825F1F22937CE6005AAB32 /* ViewController.swift in Sources */,
 				1B825F1D22937CE6005AAB32 /* AppDelegate.swift in Sources */,
+				1B825F4B22937D91005AAB32 /* MemoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
